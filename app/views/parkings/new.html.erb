@@ -1,0 +1,34 @@
+<%= form_for @parking do |f| %>
+<div class="container"><br>
+	<center>
+		<h3>Nueva entrada de vehiculo</h3><br>
+	<div class="form-group">
+		<div class="col-md-3">
+			<%= f.label :placa %>
+			<%= f.text_field :placa, class: 'form-control' %>
+		</div>
+		<br>
+		<div class="col-md-3">
+			<%= f.label :marca %>
+			<%= f.text_field :marca, class: 'form-control' %>
+		</div>
+		<br>
+		<div class="col-md-3">
+			<%= f.label :fecha_entrada %><br>
+			<%= f.date_field :fecha_entrada, class: 'form-control' %>
+		</div>
+		<br>
+		<div class="col-md-3">
+			<%= f.label :hora_entrada %>
+			<%= f.time_field :hora_entrada, class: 'form-control' %>
+		</div>
+	</div>
+	<div class="col-md-3">
+		<%= f.submit 'Guardar' %>
+	</div>
+	</center>
+</div>
+
+
+
+<% end %>

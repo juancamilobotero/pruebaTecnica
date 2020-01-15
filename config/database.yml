@@ -1,0 +1,11 @@
+development:
+  adapter: postgresql
+  encoding: utf8
+  database: prueba_tecnica_dev
+  username: postgres
+  #host: 162.243.83.252
+  host: localhost
+  pool: 5
+  port: 5432
+  password: 12345
+  connect_timeout: 300

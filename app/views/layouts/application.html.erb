@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PruebaTecnica</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag "application", controller_name, :media => "all" %>
+    <%= stylesheet_link_tag href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" %>
+    <%= javascript_include_tag "application", controller_name %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/">Parqueadero</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="/parkings/new">Entrada vehiculos <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/exit">Salida vehiculos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/parkings">Listar</a>
+          </li>
+          
+        </ul>
+      </div>
+    </nav>
+    <%= yield %>
+  </body>
+</html>

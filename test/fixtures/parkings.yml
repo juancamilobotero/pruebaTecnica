@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  placa: MyString
+  marca: MyString
+  fecha_entrada: 2020-01-14
+  hora_entrada: 2020-01-14 18:46:58
+  fecha_salida: 2020-01-14
+  hora_salida: 2020-01-14 18:46:58
+
+two:
+  placa: MyString
+  marca: MyString
+  fecha_entrada: 2020-01-14
+  hora_entrada: 2020-01-14 18:46:58
+  fecha_salida: 2020-01-14
+  hora_salida: 2020-01-14 18:46:58

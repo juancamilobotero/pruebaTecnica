@@ -1,0 +1,54 @@
+<br><h3> Listado de vehiculos</h3>
+<table class="table table-bordered">
+	<tr>
+		
+		<thead>
+			<th> Placa</th>
+			<th> Marca</th>
+			<th> Fecha entrada</th>
+			<th> Hora entrada</th>
+			<th> Fecha salida</th>
+			<th> Hora salida</th>
+			<th> Tiempo en parqueadero</th>
+			<th> Total a pagar</th>
+			
+		</thead>
+	</tr>
+	<% @parkings.each do |parking| %>
+	<tr>
+		<td> <%= parking.placa %></td>
+		<td> <%= parking.marca %></td>
+		<td> <%= parking.fecha_entrada %></td>
+		<td> 
+			<%if !parking.hora_entrada.nil? %>
+				<%= parking.hora_entrada.strftime("%I:%M%p") %>
+			<% end %>
+				
+		</td>
+		<td> <%= parking.fecha_salida %></td>
+		<td> 
+			<%if !parking.hora_salida.nil? %>
+				<%= parking.hora_salida.strftime("%I:%M%p") %>
+			<% end %>
+				
+		</td>
+		
+		<td> 
+			<%if !parking.tiempo.nil? %>
+				<%= (parking.tiempo.to_f / 60).round(1) %> Horas
+			<% end %>
+		</td>
+		
+		<td> 
+			<%if !parking.total_pagar.nil? %>
+				$ <%= parking.total_pagar.round(2) %>
+			<% end %>
+				
+		</td>
+		
+	</tr>
+
+<% end %>
+
+
+</table>
